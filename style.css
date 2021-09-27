@@ -1,0 +1,102 @@
+/*
+Theme Name: Flatsome Child
+Description: This is a child theme for Flatsome Theme
+Author: UX Themes
+Template: flatsome
+Version: 3.0
+*/
+
+/*************** SECTION 1 - START HERE   ***************/
+
+/* =HERO VERTICAL CTA */
+.hero-vertical-ctas,
+.hero-vertical-ctas .section-title {
+    color: #fff;
+}
+
+.hero-vertical-ctas .section .section-content {
+    background: rgba(0,0,0, .4)!important;
+    padding: 10px!important;
+}
+
+
+/* =QUOTES SLIDER */
+.quotes-slider .dot {
+    background: #000
+}
+
+.quotes-slider .dot.is-selected {
+    background: #000!important;
+}
+
+.quotes-slider .author-content span:before {
+    content: url('../plugins/asquared-glue/assets/img-stars.png');
+}
+
+
+/*************** SECTION 2 - MOBILE QA FIXES ONLY  ***************/
+@media only screen and (max-width: 48em) {
+
+}
+
+/*************** SECTION 3 - MEDIUM GRID AND UP  ***************/
+@media only screen and (min-width: 760px) {
+
+}
+
+/*************** SECTION 4 - DESKTOP AND UP  ***************/
+@media only screen and (min-width: 1000px) {
+    /* =HERO VERTICAL CTA */
+    .hero-vertical-ctas .section {
+        min-height: 400px!important;
+        transition: all 0.3s ease!important;
+        -moz-transition: all 0.3s ease!important;
+        -o-transition: all 0.3s ease!important;
+        padding: 0!important;
+        align-items: flex-start;
+    }
+    .hero-vertical-ctas.align-middle .section {
+        align-items: center;
+    }
+
+    .hero-vertical-ctas.align-bottom .section {
+        align-items: flex-end;
+    }
+
+    .hero-vertical-ctas.align-equal .section {
+        align-items: baseline;
+    }
+
+    .hero-vertical-ctas .section .section-content p,
+    .hero-vertical-ctas .section .section-content .button {
+        max-height: 0;
+        transition: all 0.3s ease!important;
+    }
+
+    .hero-vertical-ctas .section .section-content {
+        transition: all 0.3s ease!important;
+        -moz-transition: all 0.3s ease!important;
+        -o-transition: all 0.3s ease!important;
+        max-height: 90px;
+        position: relative!important;
+        overflow:hidden;
+    }
+
+    .hero-vertical-ctas .section:hover .section-content {
+        max-height: 500px;
+    }
+    .hero-vertical-ctas .section .section-content p,
+    .hero-vertical-ctas .section .section-content .button {
+        opacity: 0;
+        max-height: 0;
+        transition: all 0.3s ease!important;
+        -moz-transition: all 0.3s ease!important;
+        -o-transition: all 0.3s ease!important;
+    }
+
+    .hero-vertical-ctas .section:hover .section-content p,
+    .hero-vertical-ctas .section:hover .section-content .button {
+        opacity: 1;
+        max-height: 500px;
+    }
+}
